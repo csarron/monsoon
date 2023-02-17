@@ -1,0 +1,7 @@
+pyusb
+libusb1
+matplotlib
+numpy
+pandas
+scipy
+fire
