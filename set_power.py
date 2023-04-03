@@ -7,6 +7,7 @@ def power_on(serial_no='30966', voltage=4.2,  protocol=pmapi.USB_protocol()):
     Mon = HVPM.Monsoon()
     Mon.setup_usb(serial_no, protocol)
     Mon.fillStatusPacket()
+    Mon.calibrateVoltage()
     print(f"set HVPM (Serial number {Mon.getSerialNumber()}) vout to {voltage}V")
     Mon.setVout(voltage)
     Mon.closeDevice()
